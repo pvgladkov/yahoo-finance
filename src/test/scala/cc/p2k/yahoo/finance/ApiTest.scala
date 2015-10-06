@@ -14,9 +14,9 @@ class ApiTest extends FunSuite {
     s.eps shouldBe a [java.lang.Double]
     s.week52low shouldBe a [java.lang.Double]
     s.week52high shouldBe a [java.lang.Double]
-    s.daylow shouldBe a [java.lang.Double]
-    s.dayhigh shouldBe a [java.lang.Double]
-    s.movingav50day shouldBe a [java.lang.Double]
-    s.marketcap shouldBe a [java.lang.Double]
+    s.dayLow shouldBe a [java.lang.Double]
+    s.dayHigh shouldBe a [java.lang.Double]
+    s.movingAv50day shouldBe a [java.lang.Double]
+    s.marketCap shouldBe a [java.lang.Double]
   }
 }
