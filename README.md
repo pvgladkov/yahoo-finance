@@ -5,5 +5,12 @@ Example:
 import cc.p2k.yahoo.finance.Stock
 
 val s = Stock("aapl")
-s.price
+print(s.price)
+```
+
+
+Output:
+
+```
+111.31
 ```
