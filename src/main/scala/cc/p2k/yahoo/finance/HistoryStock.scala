@@ -13,7 +13,7 @@ object HistoryStock extends StockData {
     val end = DateTime.parse(to)
 
     val s = Source.fromURL(
-      "ichart.finance.yahoo.com/table.csv?s=%s&a=%d&b=%d&c=%d&d=%d&e=%d&f=%d&g=w".format(
+      "http://ichart.finance.yahoo.com/table.csv?s=%s&a=%d&b=%d&c=%d&d=%d&e=%d&f=%d&g=w".format(
         symbol, start.getMonthOfYear - 1, start.getDayOfMonth, start.getYear,
         end.getMonthOfYear - 1, end.getDayOfYear, end.getYear)
     )
