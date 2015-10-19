@@ -6,21 +6,7 @@ case class Stock(symbol: String, price: Double, volume: Int, pe: Double, eps: Do
                  week52high: Double, dayLow: Double, dayHigh: Double, movingAv50day: Double, marketCap: Double)
 
 
-object Stock {
-
-  def getInt(value: String): Int = {
-    if(value.toString.trim.matches("N/A")) {
-      return 0
-    }
-    value.toInt
-  }
-
-  def getDouble(value: String): Double = {
-    if(value.toString.trim.matches("N/A")) {
-      return 0.0
-    }
-    value.toDouble
-  }
+object Stock extends StockData {
 
   def apply(symbol: String) : Stock = {
     val sym = symbol.toUpperCase
