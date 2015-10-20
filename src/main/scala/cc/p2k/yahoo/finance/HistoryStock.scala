@@ -3,7 +3,7 @@ package cc.p2k.yahoo.finance
 import scala.io.Source
 import com.github.nscala_time.time.Imports._
 
-case class HistoryStock(date: String, open: Double, High: Double, low: Double,
+case class HistoryStock(date: String, open: Double, high: Double, low: Double,
                         close: Double, volume: Int, adjClose: Double)
 
 object HistoryStock extends StockData {
