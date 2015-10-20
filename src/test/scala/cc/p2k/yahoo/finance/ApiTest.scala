@@ -19,4 +19,10 @@ class ApiTest extends FunSuite {
     s.movingAv50day shouldBe a [java.lang.Double]
     s.marketCap shouldBe a [java.lang.Double]
   }
+
+  test("google") {
+    val hd = HistoryStock("googl", "2014-10-05", "2014-10-10", "d")
+
+    this.assert(hd.count(_=>true) == 5)
+  }
 }
