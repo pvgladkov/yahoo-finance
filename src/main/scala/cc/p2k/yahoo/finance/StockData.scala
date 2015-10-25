@@ -3,11 +3,11 @@ package cc.p2k.yahoo.finance
 
 trait StockData {
 
-  def getInt(value: String): Int = {
+  def getInt(value: String): BigInt = {
     if(value.toString.trim.matches("N/A")) {
       return 0
     }
-    value.toInt
+    BigInt(value)
   }
 
   def getDouble(value: String): Double = {

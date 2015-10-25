@@ -4,7 +4,7 @@ import scala.io.Source
 import com.github.nscala_time.time.Imports._
 
 case class HistoryStock(date: String, open: Double, high: Double, low: Double,
-                        close: Double, volume: Int, adjClose: Double)
+                        close: Double, volume: BigInt, adjClose: Double)
 
 object HistoryStock extends StockData {
 

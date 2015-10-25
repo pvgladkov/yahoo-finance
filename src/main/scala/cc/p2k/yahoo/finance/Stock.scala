@@ -2,7 +2,7 @@ package cc.p2k.yahoo.finance
 
 import scala.io.Source
 
-case class Stock(symbol: String, price: Double, volume: Int, pe: Double, eps: Double, week52low: Double,
+case class Stock(symbol: String, price: Double, volume: BigInt, pe: Double, eps: Double, week52low: Double,
                  week52high: Double, dayLow: Double, dayHigh: Double, movingAv50day: Double, marketCap: Double)
 
 
