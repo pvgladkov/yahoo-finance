@@ -9,7 +9,7 @@ class ApiTest extends FunSuite {
 
     val s = Stock("aapl")
     s.price shouldBe a [java.lang.Double]
-    s.volume shouldBe a [java.lang.Integer]
+    s.volume shouldBe a [scala.math.BigInt]
     s.pe shouldBe a [java.lang.Double]
     s.eps shouldBe a [java.lang.Double]
     s.week52low shouldBe a [java.lang.Double]
@@ -22,7 +22,17 @@ class ApiTest extends FunSuite {
 
   test("google") {
     val hd = HistoryStock("googl", "2014-10-05", "2014-10-10", "d")
-
     this.assert(hd.count(_=>true) == 5)
+  }
+
+  test("invalid ID") {
+    var isCatch = false
+    try {
+      val hd = HistoryStock("google", "2014-10-05", "2014-10-10", "d")
+    } catch {
+      case e:WrongIdException => isCatch = true
+    }
+
+    this.assert(isCatch)
   }
 }

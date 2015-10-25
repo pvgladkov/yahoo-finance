@@ -17,3 +17,5 @@ trait StockData {
     value.toDouble
   }
 }
+
+class WrongIdException(msg: String) extends Throwable(msg)

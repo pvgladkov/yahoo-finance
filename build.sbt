@@ -2,7 +2,7 @@ name := "yahoo-finance"
 
 organization := "cc.p2k"
 
-version := "1.1"
+version := "1.2"
 
 scalaVersion := "2.11.7"
 
